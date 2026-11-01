@@ -11,7 +11,7 @@ def disk_usage_percent(path="/"):
 
 def main():
     percent = disk_usage_percent("/")
-    print(f"Disk usage on /: {percent}% - {get_status(percent)}")
+    print(f"Root disk usage: {percent}% - Status: {get_status(percent)}")
 
 def get_status(percent):
     if percent >= 90:
