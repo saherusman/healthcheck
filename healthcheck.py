@@ -1,6 +1,7 @@
 """healthcheck - check how full the disk is."""
 
 import shutil
+import sys
 
 
 def disk_usage_percent(path="/"):
@@ -9,9 +10,11 @@ def disk_usage_percent(path="/"):
     return round(usage.used / usage.total * 100)
 
 
+
 def main():
-    percent = disk_usage_percent("/")
-    print(f"[{get_status(percent)}] Disk usage on /: {percent}%")
+    path = sys.argv[1] if len(sys.argv) > 1 else "/"
+    percent = disk_usage_percent(path)
+    print(f"[{get_status(percent)}] Disk usage on {path}: {percent}%")
     
 
 def get_status(percent):
