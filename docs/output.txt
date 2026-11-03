@@ -1,0 +1,2 @@
+[OK] Disk usage on /: 55%
+{"path": "/", "percent": 55, "status": "OK"}
