@@ -22,3 +22,32 @@ Check disk usage on the root filesystem:
 
 ```bash
 python3 healthcheck.py
+```
+
+Check disk usage for a selected path:
+
+```bash
+python3 healthcheck.py [path]
+```
+
+Display output in JSON format:
+
+```bash
+python3 healthcheck.py --json
+```
+
+## Testing
+
+Run the tests using pytest:
+
+```bash
+pytest -v
+```
+
+## Code Quality
+
+Run Ruff to check the code:
+
+```bash
+ruff check .
+```
