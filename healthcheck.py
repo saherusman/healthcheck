@@ -26,7 +26,7 @@ def main():
 def get_status(percent):
     if percent >= 90:
         return "CRIT"
-    if percent >= 80:
+    if percent > 80:
         return "WARN"
     return "OK"
 
