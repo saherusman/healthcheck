@@ -1,4 +1,19 @@
 # healthcheck
+
 A small tool that checks disk usage.
-Usage: python3 healthcheck.py [path]
-ok.ok
+
+## Usage
+
+Run the health check:
+
+```bash
+python3 healthcheck.py [path]
+```
+
+## Testing
+
+Run the tests using pytest:
+
+```bash
+pytest -v
+```
