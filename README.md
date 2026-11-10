@@ -50,4 +50,4 @@ Run Ruff to check the code:
 
 ```bash
 ruff check .
-```
+ok
