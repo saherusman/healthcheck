@@ -1,3 +1,4 @@
+
 """healthcheck - check how full the disk is."""
 import json
 import shutil
@@ -9,20 +10,7 @@ def disk_usage_percent(path="/"):
     usage = shutil.disk_usage(path)
     return round(usage.used / usage.total * 100)
 
-def main():
-    args = sys.argv[1:]
-    as_json = "--json" in args
-    paths = [arg for arg in args if arg != "--json"]
-    path = paths[0] if paths else "/"
 
-    percent = disk_usage_percent(path)
-    status = get_status(percent)
-
-    if as_json:
-        print(json.dumps({"path": path, "percent": percent, "status": status}))
-    else:
-        print(f"[{status}] Disk usage on {path}: {percent}%")
-    
 def get_status(percent):
     if percent >= 90:
         return "CRIT"
@@ -30,5 +18,31 @@ def get_status(percent):
         return "WARN"
     return "OK"
 
+
+def main():
+    args = sys.argv[1:]
+    as_json = "--json" in args
+    paths = [arg for arg in args if arg != "--json"]
+    path = paths[0] if paths else "/"
+
+    try:
+        percent = disk_usage_percent(path)
+    except FileNotFoundError:
+        print(
+            f"Error: path '{path}' does not exist.",
+            file=sys.stderr
+        )
+        return 1
+
+    status = get_status(percent)
+
+    if as_json:
+        print(json.dumps({"path": path, "percent": percent, "status": status}))
+    else:
+        print(f"[{status}] Disk usage on {path}: {percent}%")
+
+    return 0
+
+
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
