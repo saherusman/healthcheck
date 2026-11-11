@@ -1,40 +1,18 @@
 
 ---
 name: Bug report
-about: Report a problem or unexpected behavior
-title: "[BUG] "
+about: Something is not working
 labels: bug
-assignees: ""
 ---
 
-## Describe the bug
-
-A clear description of what the bug is.
+## What happened?
 
 ## Steps to reproduce
+1.
+2.
 
-1. Go to '...'
-2. Run '...'
-3. Observe the error.
-
-## Expected behavior
-
-Describe what you expected to happen.
-
-## Actual behavior
-
-Describe what actually happened.
-
-## Screenshots or logs
-
-Add screenshots or error messages if applicable.
+## What did you expect?
 
 ## Environment
-
-- Operating system:
-- Application version:
+- OS:
 - Python version:
-
-## Additional context
-
-Add any other information about the problem here.
