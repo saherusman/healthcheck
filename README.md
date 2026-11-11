@@ -53,3 +53,5 @@ Run Ruff to check the code:
 ruff check .
 ```
 ok
+Minor documentation correction.
+Correct another documentation mistake.
