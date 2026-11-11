@@ -1,4 +1,3 @@
-
 ---
 name: Bug report
 about: Something is not working
