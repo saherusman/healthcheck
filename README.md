@@ -1,3 +1,4 @@
+This change was made on Windows.
 # Healthcheck
 
 A simple Python tool that checks disk usage and reports whether the disk is healthy.
