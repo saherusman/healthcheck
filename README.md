@@ -1,3 +1,4 @@
+
 # Healthcheck
 
 A simple Python tool that checks disk usage and reports whether the disk is healthy.
@@ -51,3 +52,4 @@ Run Ruff to check the code:
 ```bash
 ruff check .
 ```
+ok
