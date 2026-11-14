@@ -1,4 +1,4 @@
-
+[![CI](https://github.com/saherusman/healthcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/saherusman/healthcheck/actions/workflows/ci.yml)
 # Healthcheck
 
 A simple Python tool that checks disk usage and reports whether the disk is healthy.
