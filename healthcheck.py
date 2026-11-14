@@ -14,7 +14,7 @@ def disk_usage_percent(path="/"):
 def get_status(percent):
     if percent >= 90:
         return "CRIT"
-    if percent >= 80:
+    if percent >=85:
         return "WARN"
     return "OK"
 
