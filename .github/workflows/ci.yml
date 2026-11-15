@@ -39,7 +39,3 @@ jobs:
         with:
           name: test-report-${{ matrix.python-version }}
           path: report-${{ matrix.python-version }}.xml
-      - name: Test secret masking
-        run: echo "Token is $DEMO_TOKEN"
-        env:
-          DEMO_TOKEN: ${{ secrets.DEMO_TOKEN }}
